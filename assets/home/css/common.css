@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+/**
+ * 子页框架 样式
+ */
+.main_left {
+    float: left;
+    width: 20%;
+    padding: 0;
+    margin: 5px 12px;
+}
+
+.main_left ul li {
+    line-height: 2em;
+    border-bottom: dotted lightgray 1px;
+}
+
+.main_left h2 {
+    font-size: 16px;
+    background-color: #1C327F;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.main_left h2 span {
+    /* 		background-image:url("images/home.png"); */
+    /* 		background-repeat:no-repeat; */
+}
+
+.main_left ul li a {
+    color: #008194;
+    font-weight: bold
+}
+
+.main_left h2 span, .main_left ul li a span {
+    padding: 0 5px;
+}
+
+.main_nav_left > span {
+    background-image: url("../images/nav_left.png");
+    background-repeat: no-repeat;
+}
+
+.main_nav_right > span {
+    background-image: url("../images/nav_right.png");
+    background-repeat: no-repeat;
+}
+
+.main_left ul li a:hover {
+    text-decoration: none;
+}
+
+.main_left ul li ul {
+    margin: 0 0 0 2em;
+}
+
+.main_left ul li ul li {
+    border: none;
+    border-top: dotted lightgray 1px;
+}
+
+ul.main_left_list li ul {
+    /*
+     display:none;
+     */
+}
+
+.main_left > div {
+    margin-bottom: 10px;
+}
+
+.main_right {
+    float: left;
+    width: 77%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.main_left, .main_right {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.w100 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.w100 img {
+    width: 100%;
+    /* 		height:10px; */
+}
+
+.position {
+    padding: 3px 0;
+    line-height: 1.5em;
+    border-bottom: solid 1px lightgray;
+    margin: 0 0 5px 0;
+}
+
+.position h1 {
+    color: #1370AB;
+    font-size: 100%;
+    font-weight: normal;
+    /* 		font-size: 12px; */
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+}
+
+.main_right_center1 {
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.main_banner img {
+    width: 100%;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.friendlink {
+    margin: 0;
+    padding: 5px;
+    border:dashed 1px #a9a7a7;/* solid */
+}
+
+.friendlink h3 {
+    height: 28px;
+    line-height: 28px;
+	margin:0 0 5px 0;
+}
+
+.friendlink > div > a {
+    width: 20%;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+	text-align:center;
+}

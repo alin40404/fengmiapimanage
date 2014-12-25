@@ -1,0 +1,170 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2014-01-29 10:15:38 --> Severity: Notice  --> Undefined index: ign_adminUser D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:15:38 --> Severity: Notice  --> Undefined index: ign_adminUser D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:15:38 --> Severity: Notice  --> Undefined variable: userName D:\www\czvvLtd\application\views\admin\login.php 85
+ERROR - 2014-01-29 10:15:48 --> 404 Page Not Found --> assets
+ERROR - 2014-01-29 10:15:54 --> Severity: Notice  --> Undefined index: ign_lang D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:16:08 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:08 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:11 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:11 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:13 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:13 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:14 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:14 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:14 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:16:14 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:14 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:15 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:15 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:15 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:16 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:16 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:16 --> Severity: Notice  --> Undefined index: service D:\www\czvvLtd\application\views\home\service.php 3
+ERROR - 2014-01-29 10:16:17 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:17 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:26 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:26 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:26 --> Severity: Notice  --> Undefined index: service D:\www\czvvLtd\application\views\home\service.php 3
+ERROR - 2014-01-29 10:16:47 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:47 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:47 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:47 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:47 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:48 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:49 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:52 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:52 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:52 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:53 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:54 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:54 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:54 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:56 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:16:56 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:16:56 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:16:57 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:01 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:01 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:01 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:17:02 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:02 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:02 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:17:03 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:03 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:03 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:17:04 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:07 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:09 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:11 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:11 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:11 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:12 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:18 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:18 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:18 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:19 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:20 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:20 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:20 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:22 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:25 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:25 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:25 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:28 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:29 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:29 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:29 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:17:30 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:30 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:31 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:31 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:17:33 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:17:33 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:20 --> Severity: Notice  --> Undefined index: ign_adminUser D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:48:20 --> Severity: Notice  --> Undefined index: ign_adminUser D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:48:20 --> Severity: Notice  --> Undefined variable: userName D:\www\czvvLtd\application\views\admin\login.php 85
+ERROR - 2014-01-29 10:48:27 --> Severity: Notice  --> Undefined index: ign_adminUser D:\www\czvvLtd\application\helpers\common_helper.php 479
+ERROR - 2014-01-29 10:48:31 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:31 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:31 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:31 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:32 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:32 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:32 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:32 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:32 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 281
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:33 --> Severity: Notice  --> Undefined index: service D:\www\czvvLtd\application\views\home\service.php 3
+ERROR - 2014-01-29 10:48:40 --> Severity: Notice  --> Undefined index: cateId D:\www\czvvLtd\application\controllers\home.php 25
+ERROR - 2014-01-29 10:48:40 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:41 --> Severity: Notice  --> Undefined index: cateId D:\www\czvvLtd\application\controllers\home.php 25
+ERROR - 2014-01-29 10:48:41 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:41 --> Severity: Notice  --> Undefined index: cateId D:\www\czvvLtd\application\controllers\home.php 25
+ERROR - 2014-01-29 10:48:41 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:43 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:43 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:43 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:43 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:44 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:44 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:44 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:44 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:45 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:45 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:45 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:48:55 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:55 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:55 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:55 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:48:56 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:48:56 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:00 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:00 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:01 --> Severity: Notice  --> Undefined index: cateId D:\www\czvvLtd\application\controllers\home.php 25
+ERROR - 2014-01-29 10:49:01 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:02 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:02 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:03 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:03 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:03 --> Severity: Notice  --> Undefined index: service D:\www\czvvLtd\application\views\home\service.php 3
+ERROR - 2014-01-29 10:49:03 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:03 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:04 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 10:49:04 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 10:49:04 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 36
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 44
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 50
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 63
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 70
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 88
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 91
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 98
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 101
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 114
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 122
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 123
+ERROR - 2014-01-29 10:49:34 --> Severity: Notice  --> Trying to get property of non-object D:\www\czvvLtd\application\views\category\form.php 124
+ERROR - 2014-01-29 12:37:38 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 12:37:38 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27
+ERROR - 2014-01-29 12:37:38 --> Severity: Notice  --> Undefined index: page D:\www\czvvLtd\application\controllers\home.php 158
+ERROR - 2014-01-29 12:37:40 --> Severity: Notice  --> Undefined index: Id D:\www\czvvLtd\application\controllers\home.php 26
+ERROR - 2014-01-29 12:37:40 --> Severity: Notice  --> Undefined index: lang D:\www\czvvLtd\application\controllers\home.php 27

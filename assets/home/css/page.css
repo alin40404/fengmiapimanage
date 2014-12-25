@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+	.pages {
+		padding: 10px 0;
+   		width:844px;
+		text-align:center;
+	}
+	.pages ul{
+/* 		width:80%; */
+	}
+	.pages li {
+		display: inline;
+/* 		float: left; 
+		padding: 0px 5px; */
+		height: 21px;
+		color: #444;
+		line-height: 21px;
+ 		margin-right: 0.3em; 
+		border: 1px solid #E0E0E0;
+		background: #FFF;
+	}
+	.pages li.pages_input {
+/* 		padding: 0; */
+		border: 1px solid #A0A0A0;
+	}
+	.pages li.pages_input input {
+	width: 28px;
+	border: 0px;
+	padding: 0px 3px;
+	margin: 0px 3px;
+	text-align: center;
+}
+	.pages .on {
+	color: red;
+	font-weight: bold;
+	}
+	.pages li,.pages .on{
+		padding: 3px 5px;
+	}

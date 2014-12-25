@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+/*用户用户权限补充CSS*/
+.rolesA {
+    width: 100%;
+}
+
+.rolesA, .rolesB {
+    display: block;
+    clear: both;
+    margin: 5px;
+}
+
+.rolesA {
+    line-height: 200%;
+    color: #666;
+}
+
+.rolesA h2 {
+    display: block;
+    clear: both;
+    padding: 5px;
+    padding-left: 0px;
+    background-color: #CCC;
+    color: #333;
+}
+
+.rolesA input {
+    vertical-align: middle;margin: 0 3px 0;
+}
+
+.rolesB {
+    margin-left: 0px;
+}
+
+.rolesB strong {
+    display: block;
+    clear: both;
+    float: left;
+    width: 150px;
+}
+
+.rolesC {
+    float: left;
+    width: 100%;
+    border-bottom: #CCC 1px dotted;
+}
+
+.rolesC label {
+    display: inline;
+    width: 160px;
+}
