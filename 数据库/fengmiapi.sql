@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- 主机: localhost
--- 生成日期: 2014 年 12 月 25 日 01:41
--- 服务器版本: 5.7.1-m11
--- PHP 版本: 5.4.17
+-- 主机: w.rdc.sae.sina.com.cn:3307
+-- 生成日期: 2014 年 12 月 26 日 10:02
+-- 服务器版本: 5.5.23
+-- PHP 版本: 5.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -57,8 +56,8 @@ CREATE TABLE IF NOT EXISTS `ign_admin` (
 --
 
 INSERT INTO `ign_admin` (`Id`, `gId`, `rId`, `adminName`, `adminPwd`, `realName`, `sex`, `phone`, `email`, `status`, `isChecked`, `bak`, `power`, `loginTimes`, `lastLoginIP`, `lastLoginTime`, `addUserId`, `addTime`) VALUES
-(1, 16, 1, 'admin', 'cGWT5fycWIFeLn4jJRDa/6mkLR8vLeFq+JAOxsZemvmqI4iKMQzFX4XeB0J55jbNHPF5qtkEZMYveiCbN3cnZg==', 'admin.chirs', 1, '13823386486', 'admin@163.com', 0, b'1', '超级管理员', '111', 330, '127.0.0.1', 1419433309, 1, 1366855285),
-(2, 17, 2, 'test1', 'w73uqOCWWGMB8CBd1WA9ZtTnjSlkap0r422l9jcgqO66oGMOToOq8B/M6XOl2owJlPhhCfXIPprdwcgjHG1XLA==', 'test', 1, '18666990865', '4645003@qq.com', 0, b'1', 'test', NULL, 6, '127.0.0.1', 1400226544, 1, 1397647475);
+(1, 16, 1, 'admin', 'cGWT5fycWIFeLn4jJRDa/6mkLR8vLeFq+JAOxsZemvmqI4iKMQzFX4XeB0J55jbNHPF5qtkEZMYveiCbN3cnZg==', 'admin.chirs', 1, '13823386486', 'admin@163.com', 0, '', '超级管理员', '111', 332, '121.8.62.72', 1419520238, 1, 1366855285),
+(2, 17, 2, 'test1', 'w73uqOCWWGMB8CBd1WA9ZtTnjSlkap0r422l9jcgqO66oGMOToOq8B/M6XOl2owJlPhhCfXIPprdwcgjHG1XLA==', 'test', 1, '18666990865', '4645003@qq.com', 0, '', 'test', NULL, 6, '127.0.0.1', 1400226544, 1, 1397647475);
 
 -- --------------------------------------------------------
 
@@ -81,6 +80,11 @@ CREATE TABLE IF NOT EXISTS `ign_advertise` (
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='广告图片' AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_advertise`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -95,6 +99,11 @@ CREATE TABLE IF NOT EXISTS `ign_area` (
   `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '所属语言',
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='地区信息' AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ign_area`
+--
+
 
 -- --------------------------------------------------------
 
@@ -121,6 +130,11 @@ CREATE TABLE IF NOT EXISTS `ign_article` (
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='单页表' AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_article`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -139,36 +153,53 @@ CREATE TABLE IF NOT EXISTS `ign_artonce` (
   `addTime` int(11) DEFAULT '0' COMMENT '添加时间',
   `hitsNums` int(11) DEFAULT '0' COMMENT '点击量',
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='单页表' AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='单页表' AUTO_INCREMENT=41 ;
 
 --
 -- 转存表中的数据 `ign_artonce`
 --
 
 INSERT INTO `ign_artonce` (`Id`, `cateId`, `lang`, `title`, `keywords`, `description`, `content`, `addUserId`, `addTime`, `hitsNums`) VALUES
-(1, 1, 'zh_cn', '验证用户登录', '验证  登录', '验证用户登录', '验证用户登录', 1, 1419440923, 0),
-(2, 1, 'zh_cn', '判断用户是否存在', '验证  登录', '判断用户是否存在', '判断用户是否存在', 1, 1419441266, 0),
-(3, 1, 'zh_cn', '用户注册', '用户注册', '用户注册', '用户注册', 1, 1419441400, 0),
-(4, 2, 'zh_cn', '修改用户个人信息', '修改用户个人信息', '修改用户个人信息', '修改用户个人信息', 1, 1419441613, 0),
-(5, 2, 'zh_cn', '获取用户个人信息', '获取用户个人信息', '获取用户个人信息', '获取用户个人信息', 1, 1419441623, 0),
-(6, 2, 'zh_cn', '修改用户密码', '修改用户密码', '修改用户密码', '修改用户密码', 1, 1419441634, 0),
-(7, 2, 'zh_cn', '获取用户状态', '获取用户状态', '获取用户状态', '获取用户状态', 1, 1419441646, 0),
-(8, 2, 'zh_cn', '修改用户状态', '修改用户状态', '修改用户状态', '修改用户状态', 1, 1419441656, 0),
-(9, 2, 'zh_cn', '修改用户设置', '修改用户设置', '修改用户设置', '修改用户设置', 1, 1419441666, 0),
-(10, 3, 'zh_cn', '摇一摇', '摇一摇', '摇一摇', '摇一摇', 1, 1419441712, 0),
-(11, 4, 'zh_cn', '添加好友', '添加好友', '添加好友', '添加好友', 1, 1419441736, 0),
-(12, 4, 'zh_cn', '删除好友', '删除好友', '删除好友', '删除好友', 1, 1419441746, 0),
-(13, 4, 'zh_cn', '获取好友', '获取好友', '获取好友', '获取好友', 1, 1419441755, 0),
-(14, 5, 'zh_cn', '创建好友分组', '创建好友分组', '创建好友分组', '创建好友分组', 1, 1419441769, 0),
-(15, 5, 'zh_cn', '修改好友分组名称', '修改好友分组名称', '修改好友分组名称', '修改好友分组名称', 1, 1419441778, 0),
-(16, 5, 'zh_cn', '删除好友分组', '删除好友分组', '删除好友分组', '删除好友分组', 1, 1419441788, 0),
-(17, 5, 'zh_cn', '添加用户好友分组成员', '添加用户好友分组成员', '添加用户好友分组成员', '添加用户好友分组成员', 1, 1419441797, 0),
-(18, 5, 'zh_cn', '修改好友分组状态', '修改好友分组状态', '修改好友分组状态', '修改好友分组状态', 1, 1419441806, 0),
-(19, 5, 'zh_cn', '获取用户好友分组', '获取用户好友分组', '获取用户好友分组', '获取用户好友分组', 1, 1419441815, 0),
-(20, 6, 'zh_cn', '创建群', '创建群', '创建群', '创建群', 1, 1419441839, 0),
-(21, 6, 'zh_cn', '添加群用户，支持多个', '添加群用户，支持多个', '添加群用户，支持多个', '添加群用户，支持多个', 1, 1419441849, 0),
-(22, 6, 'zh_cn', '删除群用户，支持多个', '删除群用户，支持多个', '删除群用户，支持多个', '删除群用户，支持多个', 1, 1419441859, 0),
-(23, 6, 'zh_cn', '获取用户加入的所有群名称', '获取用户加入的所有群名称', '获取用户加入的所有群名称', '获取用户加入的所有群名称', 1, 1419441868, 0);
+(1, 1, 'zh_cn', '验证用户登录', '验证  登录', '验证用户登录', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				验证用户登录\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/PostValidUser\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				phone 手机号<br />\npassword 密码\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status,\n				msg = msg,<br />\nuId = uId\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：uId 用户Id，<br />\nstatus:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419440923, 0),
+(2, 1, 'zh_cn', '判断用户是否存在', '验证  登录', '判断用户是否存在', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				判断用户是否存在\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/isUserExist\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				phone 手机号<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status,\n				msg = msg,<br />\nuId = uId\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：uId 用户Id，<br />\nstatus:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441266, 0),
+(3, 1, 'zh_cn', '用户注册', '用户注册', '用户注册', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				用户注册\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/Register\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				phone 手机号<br />\npassword 密码\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status,\n				msg = msg,<br />\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441400, 0),
+(4, 2, 'zh_cn', '修改用户个人信息', '修改用户个人信息', '修改用户个人信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改用户个人信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DealUserInfo\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\nemail<br />\nrealName<br />\nnickName<br />\nidentityCard<br />\nbirthDay<br />\naddress<br />\nuserFace 头像\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status,\n				msg = msg,<br />\nuId = uId\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：uId 用户Id，<br />\nstatus:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441613, 0),
+(5, 2, 'zh_cn', '获取用户个人信息', '获取用户个人信息', '获取用户个人信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户个人信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetUserInfo\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br />\nuser = {<br />\n phone = phone,<br />\n realName = realName,<br />\n nickName = nickName,<br />\n identityCard = identityCard,<br />\n birthDay = birthDay,<br />\n userFace = userFace,<br />\n email = email,<br />\n address = address,<br />\n userStatus = userStatus,<br />\n interests = interests,<br />\n isPermitAddFriend = isPermitAddFriend,<br />\n}\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441623, 0),
+(6, 2, 'zh_cn', '修改用户密码', '修改用户密码', '修改用户密码', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改用户密码\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DealUpdatePwd\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\noldPassword 旧密码<br />\npassword 密码<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br />\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441634, 0),
+(7, 2, 'zh_cn', '获取用户状态', '获取用户状态', '获取用户状态', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户状态\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetUserStatus\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuser ={ <br /> \n	 uId = uId, <br /> \n	 phone = phone, <br /> \n	 email = email, <br /> \n	 status = userStatus, <br /> \n}\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441646, 0),
+(8, 2, 'zh_cn', '修改用户状态', '修改用户状态', '修改用户状态', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改用户状态\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DealUserStatus\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\nstatus （status=1 在线，status=2 隐身，其他值会提示修改失败。）<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status, <br />\nmsg = msg, <br />\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441656, 0),
+(9, 2, 'zh_cn', '修改用户设置', '修改用户设置', '修改用户设置', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改用户设置\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DealUserPermit\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nisPermitAddFriend 是否允许被添加好友：1=是，0=否<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441666, 0),
+(10, 3, 'zh_cn', '摇一摇', '摇一摇', '摇一摇', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				摇一摇\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/Shake\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nuploadTime 上传时间<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nusers = [{ <br /> \nuId = t_uId,\naction = t_action, <br /> \nuploadTime = t_uploadTime, <br /> \nmodifyTime = t_modifyTime,  <br /> \nphone = phone, <br /> \nrealName = realName, <br /> \nnickName = nickName, <br /> \nidentityCard = identityCard, <br /> \nbirthDay = birthDay, <br /> \nuserFace = userFace, <br /> \n email = email, <br /> \n address = address, <br /> \n}] \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441712, 0),
+(11, 4, 'zh_cn', '添加好友', '添加好友', '添加好友', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				添加好友\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/AddFriend\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nfuId 好友Id<br />\naddType (添加类型：1表示通过手机号查询添加；2表示摇一摇（暂定如此）。可选)\nuFGroupId (好友分组Id.可选)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441736, 0),
+(12, 4, 'zh_cn', '删除好友', '删除好友', '删除好友', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				删除好友\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DeleteFriend\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nfuId 好友Id<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441746, 0),
+(13, 4, 'zh_cn', '获取好友', '获取好友', '获取好友', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取好友\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetFriend\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuserFriend = [<br />\n{<br />\n  uId = uId,<br />\n  fuId = fuId,<br />\n  addType = addType,<br />\n  uFGroupId = uFGroupId, <br />              \n  modifyTime = modifyTime,<br />\n  status = userStatus,<br />\n<br />\n  phone = phone,<br />\n  realName = realName,<br />\n  nickName = nickName,<br />\n  identityCard = identityCard,<br />\n  birthDay = birthDay,<br />\n  userFace = userFace,<br />\n  email = email,<br />\n  address = address<br />\n }]<br />\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441755, 0),
+(14, 5, 'zh_cn', '创建好友分组', '创建好友分组', '创建好友分组', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				创建好友分组\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/CreateUserFriendGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nname (名称 string类型)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuFGroupId = uFGroupId (分组ID)<br />\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441769, 0),
+(15, 5, 'zh_cn', '修改好友分组名称', '修改好友分组名称', '修改好友分组名称', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改好友分组名称\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/ModifyUserFriendGroupName\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuFGroupId 好友分组Id<br />\nname <br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441778, 0),
+(16, 5, 'zh_cn', '删除好友分组', '删除好友分组', '删除好友分组', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				删除好友分组\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DeleteUserFriendGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuFGroupId 好友分组Id<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441788, 0),
+(17, 5, 'zh_cn', '添加用户好友分组成员', '添加用户好友分组成员', '添加用户好友分组成员', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				添加用户好友分组成员\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/AddUserFriToUserFriendGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId<br />\n			fuId<br />\n			uFGroupId 好友分组Id<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441797, 0),
+(18, 5, 'zh_cn', '修改好友分组状态', '修改好友分组状态', '修改好友分组状态', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改好友分组状态\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/ModifyUserFriendGroupStatus\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uFGroupId 好友分组Id<br />\n			status<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441806, 0),
+(19, 5, 'zh_cn', '获取用户好友分组', '获取用户好友分组', '获取用户好友分组', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户好友分组\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetUserFriendGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId  <br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuserFriendGroup = {<br />\nuId = i_uId,<br />\nuFGroupId = i_uFGroupId,<br />\ngName = gName,<br />\nmodifyTime = modifyTime,<br />\nstatus = status ,<br />\n}<br />\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441815, 0),
+(20, 6, 'zh_cn', '创建群', '创建群', '创建群', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				创建群\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/CreateUserGroup	\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			name （名称 string类型）<br />\n			createUId （用户Id）<br />\n			status （群状态：可选）<br />\n			gType （群类型：可选）<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441839, 0),
+(21, 6, 'zh_cn', '添加群用户，支持多个', '添加群用户，支持多个', '添加群用户，支持多个', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				添加群用户，支持多个\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/AddUserGroupUser\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uGId 群Id<br />\n			uId 用户Id： \\",\\"号隔开<br />\n			uRole （用户角色：int类型）<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441849, 0),
+(22, 6, 'zh_cn', '删除群用户，支持多个', '删除群用户，支持多个', '删除群用户，支持多个', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				删除群用户，支持多个\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DeleteUserGroupUser\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uGId 群Id<br />\n			uId 用户Id： \\",\\"号隔开<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441859, 0),
+(23, 6, 'zh_cn', '获取用户加入的所有群名称', '获取用户加入的所有群名称', '获取用户加入的所有群名称', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户加入的所有群名称\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetUserGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId 用户Id<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuserGroup = <br /> \n{<br /> \nuId = uId,<br /> \nuGId = uGId,<br /> \nuRole = uRole,<br /> \nmodifyTime = modifyTime,<br /> \nstatus = userStatus,<br /> \nname = name,<br /> \ncreateUId =createUId,<br /> \n}\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419441868, 0),
+(24, 1, 'zh_cn', '用邮箱找回密码', '邮箱 密码', '用邮箱找回密码', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				用邮箱找回密码\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/FindPwdWithEmail\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nphone<br />\nemail  邮箱是用户注册时填写的邮箱<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419524932, 0),
+(25, 2, 'zh_cn', '修改用户对群状态', '用户 群 状态', '修改用户对群状态', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改用户对群状态\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/dealUserToGroupStatus\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\nuGId 群的Id<br />\nmodifyTime<br />\nstatus 状态<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status, <br />\nmsg = msg, <br />\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419525405, 0),
+(26, 2, 'zh_cn', '在线时 设置对某好友是否隐身', '在线时 设置对某好友是否隐身', '在线时 设置对某好友是否隐身', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				在线时 设置对某好友是否隐身\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/SetUserToFriendUserOnline\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nfuId 好友Id<br />\nisOnToHide (是否在线隐藏 0=否，1=是)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419525728, 0),
+(27, 2, 'zh_cn', '隐身时 设置对某好友是否在线', '隐身时 设置对某好友是否在线', '隐身时 设置对某好友是否在线', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				隐身时 设置对某好友是否在线\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/SetUserToFriendUserOffline\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nfuId 好友Id<br />\nisOffToVisible (是否隐藏在线 0=否，1=是)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419525785, 0),
+(28, 3, 'zh_cn', '上传头像', '上传头像', '上传头像', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				上传头像\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Common/UploadFile\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nuId 用户Id<br />\nuploadfile 图片资源<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuserFace = userFace (头像URL)<br /> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419526154, 0),
+(29, 3, 'zh_cn', '发送邮件', '发送邮件', '发送邮件', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				发送邮件\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/SendEmail\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\nemail <br />\nsubject (邮件主题)<br />\ncontent (邮件内容，支持HTML编辑内容)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419526372, 0),
+(30, 5, 'zh_cn', '在线时 设置对分组好友是否隐身', '在线时 设置对分组好友是否隐身', '在线时 设置对分组好友是否隐身', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				在线时 设置对分组好友是否隐身\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/SetUserFriendGroupOnline\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uFGroupId (好友分组Id)<br />\n			isOnToHide (是否在线隐藏 0=否，1=是)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419527988, 0),
+(31, 5, 'zh_cn', '隐身时 设置对分组好友是否在线', '隐身时 设置对分组好友是否在线', '隐身时 设置对分组好友是否在线', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				隐身时 设置对分组好友是否在线\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/SetUserFriendGroupOffline\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uFGroupId (好友分组Id)<br />\nisOffToVisible （是否隐藏在线 0=否，1=是）<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\n				status = status, <br />\nmsg = msg, <br />\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419528060, 0),
+(32, 6, 'zh_cn', '获取群用户', '获取群用户', '获取群用户', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取群用户\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/GetUserGroupUser\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId 用户Id<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \nuserGroup = <br /> \n{<br />  \n&nbsp;	&nbsp;uGId = uGId,<br /> \n&nbsp;	&nbsp;uRole = uRole,<br /> \n&nbsp;	&nbsp;modifyTime = modifyTime,<br /> \n&nbsp;	&nbsp;name = name,<br /> \n&nbsp;	&nbsp;createUId =createUId,<br /> \n&nbsp;	&nbsp;userGroupUser=[{<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;uRole = uRole,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;status = ugStatus,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;uId = ug_uId,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;phone = phone,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;realName = realName,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;nickName = nickName,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;identityCard = identityCard,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;birthDay = birthDay,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;userFace = userFace,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;email = email,<br /> \n&nbsp;	&nbsp;&nbsp;	&nbsp;address = address<br /> \n&nbsp;	&nbsp;}]<br /> \n}<br /> \n\n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419528863, 0),
+(33, 6, 'zh_cn', '删除群组', '删除群组', '删除群组', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				删除群组\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/DeleteUserGroup\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uGId 群Id<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419528927, 0),
+(34, 6, 'zh_cn', '修改群用户角色', '修改群用户角色', '修改群用户角色', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改群用户角色\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/ModifyUserGroupUserRole\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uGId 群Id<br />\n			uId 用户Id：int类型<br />\n			uRole 用户角色：int类型<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419529019, 0),
+(35, 6, 'zh_cn', '修改群名称', '修改群名称', '修改群名称', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				修改群名称\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/User/ModifyUserGroupName\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uGId 群Id<br />\n			name 群名称<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419529072, 0),
+(36, 7, 'zh_cn', '上传用户定位信息', '上传用户定位信息', '上传用户定位信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				上传用户定位信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Position/SetPosition\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId 用户Id<br />\n			longitude 经度 decimal(10, 6)<br />\n			latitude 纬度 decimal(10, 6)<br />\n			placeName 地名<br />\n			uploadTime 上传时间<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \n\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419529266, 0),
+(37, 7, 'zh_cn', '获取用户定位信息', '获取用户定位信息', '获取用户定位信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户定位信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Position/GetPosition\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId 用户Id<br />\nperPage 获取的数量，默认10<br />\npage 第几页数，默认第1页 <br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br />\ntotal=total,<br />\npageTotal=pageTotal,<br />\ndata =[{<br />\n&nbsp;　&nbsp;longitude = longitude,<br />\n&nbsp;　&nbsp;latitude = latitude,<br />\n&nbsp;　&nbsp;placeName = placeName,<br />\n&nbsp;　&nbsp;uploadTime = uploadTime,<br />\n&nbsp;　&nbsp;modifyTime = modifyTime,<br />\n&nbsp;　&nbsp;offlineUserIds = offlineUserIds,<br />\n&nbsp;　&nbsp;isHiding = i_isHiding,<br />\n}],<br />\n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419529441, 0),
+(38, 7, 'zh_cn', '获取用户最新定位信息', '获取用户最新定位信息', '获取用户最新定位信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取用户最新定位信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Position/GetUserNewestPosition\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n			uId (用户Id，多个用户使用\\'',\\'' 分隔)<br />\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n			<td>\nstatus = status, <br />\nmsg = msg, <br /> \ndata = [{<br /> \n&nbsp;　&nbsp;uId = uId,<br /> \n&nbsp;　&nbsp;position = {<br /> \n&nbsp;　　&nbsp;longitude = longitude,<br /> \n&nbsp;　　&nbsp;latitude = latitude,<br /> \n&nbsp;　　&nbsp;placeName = placeName,<br /> \n&nbsp;　　&nbsp;uploadTime = uploadTime,<br /> \n&nbsp;　　&nbsp;modifyTime = modifyTime,<br /> \n&nbsp;　　&nbsp;offlineUserIds = offlineUserIds,<br /> \n&nbsp;　　&nbsp;isHiding = i_isHiding,<br /> \n&nbsp;　&nbsp;}<br /> \n}]<br /> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419529813, 0),
+(39, 7, 'zh_cn', '获取群用户最新定位信息', '获取群用户最新定位信息', '获取群用户最新定位信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取群用户最新定位信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Position/GetUserNewestPositionByUGid\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uGId<br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n<td>\nstatus = status, <br>\nmsg = msg, <br> \ndata = [{<br> \n&nbsp;　&nbsp;uId = uId,<br> \n&nbsp;　&nbsp;position = {<br> \n&nbsp;　　&nbsp;longitude = longitude,<br> \n&nbsp;　　&nbsp;latitude = latitude,<br> \n&nbsp;　　&nbsp;placeName = placeName,<br> \n&nbsp;　　&nbsp;uploadTime = uploadTime,<br> \n&nbsp;　　&nbsp;modifyTime = modifyTime,<br> \n&nbsp;　　&nbsp;offlineUserIds = offlineUserIds,<br> \n&nbsp;　　&nbsp;isHiding = i_isHiding,<br> \n&nbsp;　&nbsp;}<br> \n}]<br> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419530242, 0),
+(40, 7, 'zh_cn', '获取所有好友的最新定位信息', '获取所有好友的最新定位信息', '获取所有好友的最新定位信息', '<table class=\\"table table-bordered table-striped\\">\n	<tbody>\n		<tr>\n			<th>\n				功能\n			</th>\n			<td>\n				获取所有好友的最新定位信息\n			</td>\n		</tr>\n		<tr>\n			<th>\n				API路径\n			</th>\n			<td>\n				/Position/GetNewestPosition	\n			</td>\n		</tr>\n		<tr>\n			<th>\n				请求方式(默认：POST)\n			</th>\n			<td>\n				POST\n			</td>\n		</tr>\n		<tr>\n			<th>\n				传参\n			</th>\n			<td>\n				uId <br />\n\n			</td>\n		</tr>\n		<tr>\n			<th>\n				返回值\n			</th>\n<td>\nstatus = status, <br>\nmsg = msg, <br> \ndata = [{<br> \n&nbsp;　&nbsp;uId = uId,<br> \n&nbsp;　&nbsp;fuId = fuId,<br> \n&nbsp;　&nbsp;status = userFriStatus,<br> \n&nbsp;　&nbsp;userStatus = userStatus,<br> \n&nbsp;　&nbsp;position = {<br> \n&nbsp;　　&nbsp;longitude = longitude,<br> \n&nbsp;　　&nbsp;latitude = latitude,<br> \n&nbsp;　　&nbsp;placeName = placeName,<br> \n&nbsp;　　&nbsp;uploadTime = uploadTime,<br> \n&nbsp;　　&nbsp;modifyTime = modifyTime,<br> \n&nbsp;　　&nbsp;offlineUserIds = offlineUserIds,<br> \n&nbsp;　　&nbsp;isHiding = i_isHiding,<br> \n&nbsp;　&nbsp;}<br> \n}]<br> \n			</td>\n		</tr>\n	</tbody>\n</table>\n<p>\n	备注：status:<br />\nerror：表示错误<br />\nsucceed：表示成功\n</p>', 1, 1419530397, 0);
 
 -- --------------------------------------------------------
 
@@ -197,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `ign_category` (
   `addUserId` int(11) DEFAULT '0' COMMENT '添加用户Id',
   `addTime` int(11) DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='类别表' AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='类别表' AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `ign_category`
@@ -209,7 +240,8 @@ INSERT INTO `ign_category` (`Id`, `fatherId`, `cateName`, `orderNum`, `catePath`
 (3, 0, '用户动作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '用户动作', '用户动作，例如摇一摇', 'artonce', 1, 1419434448),
 (4, 0, '好友操作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '好友操作', '好友操作', 'artonce', 1, 1419434459),
 (5, 0, '好友分组操作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '好友分组操作', '好友分组操作', 'artonce', 1, 1419434470),
-(6, 0, '群组操作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '群组操作', '群组操作', 'artonce', 1, 1419434480);
+(6, 0, '群组操作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '群组操作', '群组操作', 'artonce', 1, 1419434480),
+(7, 0, '定位操作', 0, '0', NULL, 1, 1, 0, 1, '#', '_self', NULL, 'zh_cn', '定位操作', '定位操作', 'artonce', 1, 1419529144);
 
 -- --------------------------------------------------------
 
@@ -261,6 +293,11 @@ CREATE TABLE IF NOT EXISTS `ign_feedback` (
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='留言反馈表' AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_feedback`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -289,6 +326,11 @@ CREATE TABLE IF NOT EXISTS `ign_goods` (
   KEY `name` (`name`(333))
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_goods`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -310,6 +352,11 @@ CREATE TABLE IF NOT EXISTS `ign_goods_extend` (
   PRIMARY KEY (`Id`),
   KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ign_goods_extend`
+--
+
 
 -- --------------------------------------------------------
 
@@ -356,6 +403,11 @@ CREATE TABLE IF NOT EXISTS `ign_link` (
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='友情链接表' AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_link`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -372,66 +424,62 @@ CREATE TABLE IF NOT EXISTS `ign_log` (
   `userId` int(11) DEFAULT '0' COMMENT '日志产生的用户Id',
   `userType` tinyint(1) DEFAULT '0' COMMENT '用户类型,1管理员，2前台会员，3普通游客',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='系统日志' AUTO_INCREMENT=54 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='系统日志' AUTO_INCREMENT=50 ;
 
 --
 -- 转存表中的数据 `ign_log`
 --
 
 INSERT INTO `ign_log` (`Id`, `logType`, `describe`, `logTime`, `ip`, `emergeURL`, `userId`, `userType`) VALUES
-(1, 2, '登录失败，用户名不存在', 1419407050, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/login', NULL, 0),
-(2, 2, '登录失败，密码错误', 1419407102, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/login', NULL, 0),
-(3, 2, '登录失败，密码错误', 1419407111, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/login', NULL, 0),
-(4, 2, '登录失败，密码错误', 1419407120, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/login', NULL, 0),
-(5, 2, '登录成功！', 1419407394, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/login', 1, 0),
-(6, 3, '清除缓存成功 !', 1419407435, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(7, 3, '成功 !', 1419421938, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(8, 1, '抱歉，您无操作权限！', 1419423932, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(9, 1, '抱歉，您无操作权限！', 1419423936, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(10, 3, '成功 !', 1419424084, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(11, 1, '抱歉，您无管理类别操作权限！', 1419424362, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/category/index', 1, 0),
-(12, 1, '抱歉，您无管理单页面操作权限！', 1419424368, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/artonce/index', 1, 0),
-(13, 3, '成功 !', 1419424412, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(14, 1, '抱歉，您无管理留言反馈操作权限！', 1419424423, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/feedback/index', 1, 0),
-(15, 0, '添加管理员组成功！', 1419424475, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/adminGroup/deal', 1, 0),
-(16, 0, '修改管理员组成功！', 1419424525, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/adminGroup/deal', 1, 0),
-(17, 1, '抱歉，您无操作权限！', 1419424737, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/CommonCate/index', 1, 0),
-(18, 0, '修改管理员组成功！', 1419425246, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/adminGroup/deal', 1, 0),
-(19, 0, '修改管理员角色成功！', 1419425267, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/adminRole/deal', 1, 0),
-(20, 3, '成功 !', 1419425271, '127.0.0.1', 'http://127.0.0.1/fengmiapiwebsite/fengmiapimanage/index.php/admin/cache', 1, 0),
-(21, 2, '登录失败，密码错误', 1419433299, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/admin/login', NULL, 0),
-(22, 2, '登录成功！', 1419433308, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/admin/login', 1, 0),
-(23, 3, '成功 !', 1419433338, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/admin/cache', 1, 0),
-(24, 3, '成功 !', 1419433354, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/admin/cache', 1, 0),
-(25, 0, '添加类别成功！', 1419434381, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(26, 0, '添加类别成功！', 1419434403, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(27, 0, '添加类别成功！', 1419434448, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(28, 0, '添加类别成功！', 1419434459, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(29, 0, '添加类别成功！', 1419434470, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(30, 0, '添加类别成功！', 1419434480, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/category/deal', 1, 0),
-(31, 0, '添加单页面成功！', 1419440923, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(32, 0, '添加单页面成功！', 1419441266, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(33, 0, '添加单页面成功！', 1419441400, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(34, 0, '添加单页面成功！', 1419441613, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(35, 0, '添加单页面成功！', 1419441623, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(36, 0, '添加单页面成功！', 1419441634, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(37, 0, '添加单页面成功！', 1419441646, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(38, 0, '添加单页面成功！', 1419441656, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(39, 0, '添加单页面成功！', 1419441666, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(40, 0, '添加单页面成功！', 1419441712, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(41, 0, '添加单页面成功！', 1419441736, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(42, 0, '添加单页面成功！', 1419441746, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(43, 0, '添加单页面成功！', 1419441755, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(44, 0, '添加单页面成功！', 1419441769, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(45, 0, '添加单页面成功！', 1419441778, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(46, 0, '添加单页面成功！', 1419441788, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(47, 0, '添加单页面成功！', 1419441797, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(48, 0, '添加单页面成功！', 1419441806, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(49, 0, '添加单页面成功！', 1419441815, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(50, 0, '添加单页面成功！', 1419441839, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(51, 0, '添加单页面成功！', 1419441849, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(52, 0, '添加单页面成功！', 1419441859, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0),
-(53, 0, '添加单页面成功！', 1419441868, '127.0.0.1', 'http://localhost:8001/fengmiapimanage/index.php/artonce/deal', 1, 0);
+(1, 0, '修改单页面成功！', 1419505259, '14.23.158.218', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(2, 0, '修改单页面成功！', 1419505447, '14.23.158.218', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(3, 0, '修改单页面成功！', 1419505525, '14.23.158.218', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(4, 0, '修改单页面成功！', 1419506612, '14.23.158.218', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(5, 0, '修改单页面成功！', 1419524174, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(6, 0, '修改单页面成功！', 1419524266, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(7, 0, '修改单页面成功！', 1419524349, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(8, 0, '修改单页面成功！', 1419524454, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(9, 0, '修改单页面成功！', 1419524543, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(10, 0, '添加单页面成功！', 1419524932, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(11, 0, '修改单页面成功！', 1419525183, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(12, 0, '修改单页面成功！', 1419525211, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(13, 0, '添加单页面成功！', 1419525405, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(14, 0, '修改单页面成功！', 1419525433, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(15, 0, '修改单页面成功！', 1419525531, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(16, 0, '修改单页面成功！', 1419525578, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(17, 0, '添加单页面成功！', 1419525728, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(18, 0, '添加单页面成功！', 1419525785, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(19, 0, '修改单页面成功！', 1419526052, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(20, 0, '添加单页面成功！', 1419526154, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(21, 0, '添加单页面成功！', 1419526372, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(22, 0, '修改单页面成功！', 1419526623, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(23, 0, '修改单页面成功！', 1419526661, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(24, 0, '修改单页面成功！', 1419527271, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(25, 0, '修改单页面成功！', 1419527415, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(26, 0, '修改单页面成功！', 1419527484, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(27, 0, '修改单页面成功！', 1419527522, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(28, 0, '修改单页面成功！', 1419527575, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(29, 0, '修改单页面成功！', 1419527779, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(30, 0, '修改单页面成功！', 1419527849, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(31, 0, '添加单页面成功！', 1419527988, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(32, 0, '添加单页面成功！', 1419528060, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(33, 0, '修改单页面成功！', 1419528377, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(34, 0, '修改单页面成功！', 1419528439, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(35, 0, '修改单页面成功！', 1419528483, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(36, 0, '修改单页面成功！', 1419528592, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(37, 0, '添加单页面成功！', 1419528863, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(38, 0, '添加单页面成功！', 1419528927, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(39, 0, '添加单页面成功！', 1419529019, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(40, 0, '添加单页面成功！', 1419529072, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(41, 0, '添加类别成功！', 1419529144, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/category/deal', 1, 0),
+(42, 0, '添加单页面成功！', 1419529266, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(43, 0, '添加单页面成功！', 1419529441, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(44, 0, '添加单页面成功！', 1419529813, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(45, 0, '修改单页面成功！', 1419529994, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(46, 0, '修改单页面成功！', 1419530028, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(47, 0, '添加单页面成功！', 1419530242, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(48, 0, '添加单页面成功！', 1419530397, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/artonce/deal', 1, 0),
+(49, 2, '注销成功！', 1419530569, '121.8.62.72', 'http://alinchen.sinaapp.com/index.php/admin/logout', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -472,6 +520,11 @@ CREATE TABLE IF NOT EXISTS `ign_member` (
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员' AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_member`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -488,6 +541,11 @@ CREATE TABLE IF NOT EXISTS `ign_msg` (
   `addUserId` varchar(20) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='信息' AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ign_msg`
+--
+
 
 -- --------------------------------------------------------
 
@@ -515,6 +573,11 @@ CREATE TABLE IF NOT EXISTS `ign_news` (
   `addUserId` int(11) DEFAULT '0' COMMENT '添加用户Id',
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='新闻' AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ign_news`
+--
+
 
 -- --------------------------------------------------------
 
@@ -544,6 +607,11 @@ CREATE TABLE IF NOT EXISTS `ign_product` (
   KEY `name` (`title`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- 转存表中的数据 `ign_product`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -565,6 +633,11 @@ CREATE TABLE IF NOT EXISTS `ign_relefile` (
   `addTime` int(11) DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='内容关联文件' AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ign_relefile`
+--
+
 
 -- --------------------------------------------------------
 
@@ -592,7 +665,3 @@ CREATE TABLE IF NOT EXISTS `ign_role` (
 INSERT INTO `ign_role` (`Id`, `fatherId`, `gId`, `rName`, `orderNum`, `power`, `bak`, `addUserId`, `addTime`) VALUES
 (1, 0, 1, '超级管理员', 0, 'adminGroup_00,adminGroup_01,adminGroup_02,adminGroup_03,adminGroup_04,adminRole_00,adminRole_01,adminRole_02,adminRole_03,adminRole_04,adminUser_00,adminUser_01,adminUser_02,adminUser_03,adminUser_04,category_00,category_01,category_02,category_03,category_04,artonce_00,artonce_01,artonce_02,artonce_03,artonce_04,product_00,product_01,product_02,product_03,product_04,logs_00,logs_01,logs_03,feedback_00,feedback_01,feedback_02,feedback_03,feedback_04,friendlink_00,friendlink_01,friendlink_02,friendlink_03,friendlink_04,admin_00,admin_01,admin_05,admin_06', '超级管理员', 1, 1364873946),
 (2, 0, 17, '普通管理员', 0, 'policeCate_00,policeCate_01,policeCate_02,policeCate_03,policeCate_04,policeRole_00,policeRole_01,policeRole_02,policeRole_03,policeRole_04,police_00,police_01,police_02,police_03,police_04,msg_00,msg_01,msg_05,msg_06,msg_07,GPS_00,GPS_01,GPS_05,GPS_06,GPSEquipment_00,GPSEquipment_01,GPSEquipment_02,GPSEquipment_03,GPSEquipment_04,GPSLogs_00,GPSLogs_01,GPSLogs_03,admin_00,admin_01,admin_05,admin_06,database_00,database_01,database_05,database_06,logs_00,logs_01,logs_03', '普通管理员', 1, 1397647447);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
