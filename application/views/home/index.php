@@ -143,7 +143,7 @@ $count = count($query);
 				  </h3>
 				</div>
 				<div class="row download-builder">
-				  <div class="span3">
+				  <div class="">
 					<?=$content ?>
 				  </div><!-- /span -->
 				</div><!-- /row -->
