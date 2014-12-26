@@ -1042,7 +1042,7 @@ if (! function_exists ( 'get_formTable_jsCss' )) {
 	function get_formTable_jsCss(){
 		$str=<<<HTML
 				<link rel="stylesheet" href="<{BASE_URL}>assets/admin/css/topower.css" type="text/css" media="all">
-				<link rel="stylesheet" href="<{BASE_URL}>assets/validform/css/validform.css" type="text/css" media="all">
+				<link rel="stylesheet" href="<{BASE_URL}>assets/Validform/css/validform.css" type="text/css" media="all">
 				<script src="<{BASE_URL}>assets/Validform/js/Validform_v5.3.2_min.js"></script>
 				<script type="text/javascript">
 					$(function(){
